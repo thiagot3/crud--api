@@ -4,6 +4,6 @@ export interface Atendimento {
     coordenador: string;
     assunto: string;
     descricao: string;
-    data: string;
+    data: Date;
 
     }

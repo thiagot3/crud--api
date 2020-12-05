@@ -1,1 +1,25 @@
-<p>listar-atendimento works!</p>
+<div class="card list-atendimento">
+    <h5 class="card-header">Lista de atendimentos</h5>
+    <div class="card-body">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id:</th>
+              <th scope="col">Coordenador:</th>
+              <th scope="col">Assunto:</th>
+              <th scope="col">Descrição:</th>
+              <th scope="col">Data:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let atendimento of atendimentos">
+              <td>{{atendimento.id}}</td>
+              <td>{{atendimento.coordenador}}</td>
+              <td>{{atendimento.assunto}}</td>
+              <td>{{atendimento.descricao}}</td>
+              <td>{{atendimento.data}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>

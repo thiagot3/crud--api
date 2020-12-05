@@ -1,1 +1,24 @@
-<p>novo-atendimento works!</p>
+<form (NgSubmit)="onSubmit(f)" #f="ngForm">
+
+ 
+    <div>
+        <label for="coordenador">Coordenador: &nbsp;</label>
+        <input placeholder="Digite o nome do Coordenador do atendimento:" type="text" [(ngModel)]="service-atendimento.coordenador" id="coordenador" name="coordenador" ngModel required>
+    </div>
+    <div>
+        <label for="assunto">Assunto: &nbsp;</label>
+        <input type="text" [(ngModel)]="service-atendimento.assunto" id="assunto" name="assunto" ngModel required>
+    </div>
+    <div>
+        <label for="descricao">Descrição: &nbsp;</label>
+        <input type="text" [(ngModel)]="service-atendimento.descricao" id="descricao" name="descricao" ngModel required>
+    </div>
+    <div>
+        <label for="data">Data: &nbsp;</label>
+        <input type="date" [(ngModel)]="service-atendimento.data" id="data" name="data" ngModel required>
+    </div>
+    <div>  
+        <button class="btn btn-primary" type="submit" value="Enviar" [disabled]="f.form.invalid">Enviar</button>
+    </div>
+
+</form>
